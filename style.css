@@ -21,3 +21,22 @@ body {
 .inline .box {
     display: inline;
 }
+
+.inline-block .box {
+    display: inline-block;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+.inline-flex {
+    display: inline-flex;
+    gap: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
