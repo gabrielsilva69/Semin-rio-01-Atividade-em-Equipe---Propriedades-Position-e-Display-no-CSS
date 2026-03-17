@@ -1,3 +1,15 @@
 body {
     font-family: Arial;
 }
+
+.exemplo {
+    border: 1px dashed black;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.box {
+    background: lightblue;
+    padding: 10px;
+    margin: 5px;
+}
