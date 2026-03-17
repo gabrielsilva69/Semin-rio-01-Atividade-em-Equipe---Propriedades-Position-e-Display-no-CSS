@@ -13,3 +13,11 @@ body {
     padding: 10px;
     margin: 5px;
 }
+
+.block .box {
+    display: block;
+}
+
+.inline .box {
+    display: inline;
+}
