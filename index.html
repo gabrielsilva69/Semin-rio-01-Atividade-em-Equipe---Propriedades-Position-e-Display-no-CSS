@@ -8,60 +8,71 @@
 </head>
 
 <body>
+    <p><b>Nomes: Gabriel Silva, Arthur Backes e Enzo</b></p>
+    <p><b>Turma: Ds M5</b></p>
+
+    <hr>
 
     <h1> Propriedades Position e Display no CSS</h1>
 
     <h2>display: block</h2>
-    <p>Ocupa toda a linha.</p>
+    <p>Ocupa toda a largura disponível e força quebra de linha. Use quando quer estruturar a página em seções (ex: divs,
+        parágrafos). Não é ideal quando você quer elementos lado a lado.</p>
     <div class="block exemplo">
         <div class="box">1</div>
         <div class="box">2</div>
     </div>
 
     <h2>display: inline</h2>
-    <p>Fica na mesma linha.</p>
+    <p>Fica na mesma linha, mas NÃO aceita largura e altura. Use apenas para textos ou pequenos elementos (como span).
+        Evite quando precisar controlar tamanho.</p>
     <div class="inline exemplo">
         <div class="box">1</div>
         <div class="box">2</div>
     </div>
 
     <h2>display: inline-block</h2>
-    <p>Fica na mesma linha e aceita tamanho.</p>
+    <p>Fica na mesma linha e permite definir largura e altura. Use quando quer alinhar elementos lado a lado, mas ainda
+        controlar tamanho — diferente do inline.</p>
     <div class="inline-block exemplo">
         <div class="box">1</div>
         <div class="box">2</div>
     </div>
 
     <h2>display: flex</h2>
-    <p>Coloca os elementos lado a lado e facilita organizar.</p>
+    <p>Cria um layout flexível em linha. Use quando precisa alinhar, centralizar ou distribuir elementos facilmente.
+        Melhor escolha para layouts modernos simples (ex: menus, cards).</p>
     <div class="flex exemplo">
         <div class="box">1</div>
         <div class="box">2</div>
     </div>
 
     <h2>display: inline-flex</h2>
-    <p>Flex sem quebrar linha.</p>
+    <p>Igual ao flex, mas não quebra linha. Use quando quer flex dentro de um fluxo de texto ou junto com outros
+        elementos inline.</p>
     <div class="inline-flex exemplo">
         <div class="box">1</div>
         <div class="box">2</div>
     </div>
 
     <h2>display: grid</h2>
-    <p>Organiza em colunas.</p>
+    <p>Cria layout em linhas e colunas. Use quando precisa organizar conteúdo em estrutura mais complexa (ex: páginas
+        inteiras, dashboards). Melhor que flex quando há duas dimensões.</p>
     <div class="grid exemplo">
         <div class="box">1</div>
         <div class="box">2</div>
     </div>
 
     <h2>display: inline-grid</h2>
-    <p>Grid na mesma linha.</p>
+    <p>Grid sem quebrar linha. Use quando precisa de grid, mas dentro de um fluxo inline.</p>
     <div class="inline-grid exemplo">
         <div class="box">1</div>
         <div class="box">2</div>
     </div>
 
     <h2>display: flow-root</h2>
-    <p>Corrige problema com float.</p>
+    <p>Cria um novo contexto de layout e resolve problemas com float (como elementos "escapando" do container). Use
+        quando tiver float e o container estiver colapsando.</p>
 
     <p>block (buga)</p>
     <div class="block exemplo altura">
@@ -74,18 +85,84 @@
     </div>
 
     <h2>display: table</h2>
-    <p>Se comporta como tabela.</p>
+    <p>Faz o elemento se comportar como tabela. Use raramente — geralmente flex ou grid são melhores, mas pode ser útil
+        para compatibilidade ou layouts específicos.</p>
     <div class="table exemplo">
         <div class="box">1</div>
         <div class="box">2</div>
     </div>
 
     <h2>display: inline flow-root</h2>
-    <p>Igual ao inline, mas com comportamento interno do flow-root.</p>
+    <p>Combina comportamento inline com isolamento interno (flow-root). Use quando precisa evitar problemas de float sem
+        quebrar linha.</p>
     <div class="inline-flow-root exemplo altura">
         <div class="float"></div>
     </div>
 
+    <h2>display: block flow</h2>
+    <p>É o comportamento padrão (equivalente ao block). O elemento ocupa toda a linha e organiza filhos no fluxo normal.
+        Use quando não precisa de layout especial.</p>
+    <div class="block-flow exemplo">
+        <div class="box">1</div>
+        <div class="box">2</div>
+    </div>
+
+    <h2>display: block flex</h2>
+    <p>Equivale ao display: flex. O elemento ocupa a linha inteira (block) e organiza os filhos com flex. Use quando
+        quer layout flexível ocupando toda a largura.</p>
+    <div class="block-flex exemplo">
+        <div class="box">1</div>
+        <div class="box">2</div>
+    </div>
+
+    <h2>display: block grid</h2>
+    <p>Equivale ao display: grid. Ocupa a linha inteira e organiza em grade. Use quando precisa de layout estruturado em
+        colunas/linhas ocupando o espaço todo.</p>
+    <div class="block-grid exemplo">
+        <div class="box">1</div>
+        <div class="box">2</div>
+    </div>
+
+    <h2>display: inline flow</h2>
+    <p>Equivale ao inline. Fica na mesma linha e usa fluxo normal internamente. Use para textos ou elementos pequenos —
+        não para layout.</p>
+    <div class="inline-flow exemplo">
+        <div class="box">1</div>
+        <div class="box">2</div>
+    </div>
+
+    <h2>position: static</h2>
+    <p>É o comportamento padrão. O elemento segue o fluxo normal e ignora top/left/right/bottom. Use quando NÃO precisa
+        controlar posição — evita complexidade desnecessária.</p>
+    <div class="static exemplo">
+        <div class="box">static</div>
+    </div>
+
+    <h2>position: relative</h2>
+    <p>Move o elemento sem tirá-lo do fluxo. O espaço original continua reservado. Use quando quer ajustar posição
+        visual sem afetar outros elementos — ideal para pequenos deslocamentos.</p>
+    <div class="relative exemplo">
+        <div class="box">relative</div>
+    </div>
+
+    <h2>position: absolute</h2>
+    <p>Remove o elemento do fluxo e posiciona em relação ao pai com position diferente de static. Use quando precisa de
+        controle total dentro de um container (ex: badge, botão dentro de card).</p>
+    <div class="absolute-container exemplo">
+        <div class="box absolute">absolute</div>
+    </div>
+
+    <h2>position: fixed</h2>
+    <p>Fica preso na tela (viewport), independente da rolagem. Use quando o elemento deve sempre estar visível (ex:
+        botão de suporte, menu fixo). Evite em excesso pois pode atrapalhar UX.</p>
+    <div class="box fixed">fixed</div>
+
+    <h2>position: sticky</h2>
+    <p>Funciona como relative até atingir um limite (top, por exemplo), depois vira fixed. Use para menus que acompanham
+        a rolagem sem ficar fixos o tempo todo.</p>
+    <div class="sticky exemplo">
+        <div class="box">sticky</div>
+    </div>
 
 </body>
 

@@ -41,6 +41,10 @@ body {
     grid-template-columns: 1fr 1fr;
 }
 
+.inline-grid {
+    display: inline-grid;
+}
+
 .flow-root {
     display: flow-root;
 }
@@ -53,6 +57,7 @@ body {
     display: inline flow-root;
 }
 
+
 .float {
     float: left;
     width: 50px;
@@ -62,4 +67,65 @@ body {
 
 .altura {
     border: 2px solid black;
+}
+
+.static .box {
+    position: static;
+}
+
+.relative .box {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    background: lightgreen;
+}
+
+.absolute-container {
+    position: relative;
+    height: 100px;
+    border: 2px solid red;
+}
+
+.absolute {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: orange;
+}
+
+.fixed {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: purple;
+    color: white;
+}
+
+.sticky {
+    height: 200px;
+}
+
+.sticky .box {
+    position: sticky;
+    top: 0;
+    background: yellow;
+}
+
+.block-flow {
+    display: block flow;
+}
+
+.block-flex {
+    display: block flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.block-grid {
+    display: block grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.inline-flow .box {
+    display: inline flow;
 }
